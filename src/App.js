@@ -9,12 +9,9 @@ function App() {
 <div className="oval">
     </div>
     <div className='content'> 
-    <ProductList/>
-    <Cart/>
+    <ProductList className='ProductList'/>
+    <Cart />
     </div>
-    
-
-    
     
     </div>
     

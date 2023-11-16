@@ -29,7 +29,7 @@ function CardItem(props) {
 
     },[cart])
     return (
-        <div className='card-content__item'>
+        <div className='card-content__item '>
             <div className='card-content__item-img' style={{ backgroundColor: props.item?.color }}>
                 <img src={props.item?.image} alt="" />
 

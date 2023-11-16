@@ -26,6 +26,10 @@ left: -300px;
 .content{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+  margin-top: 40px;
+  padding-bottom: 30px;
 }
 
 .card{
@@ -36,7 +40,7 @@ left: -300px;
   position: relative;
   z-index: 3;
   border-radius: 28px;
-  margin: 80px 40px;
+  margin: 40px 20px 0;
   padding: 12px 28px;
   box-shadow: 0 0px 5px gray;
   overflow: hidden;
@@ -79,15 +83,18 @@ font-weight: bolder;
   padding-bottom: 25px;
   margin-bottom: 80px;
 }
+.card-content__item:first-child{
+  padding-top: 5px;
+}
 .card-content__item:not(:last-child){
-  margin-bottom: 80px;
+  margin-bottom: 65px;
 }
 .card-content__item-cart:not(:last-child){
   margin-bottom: 5px;
 }
 .card-content__item-img{
   border-radius: 28px;
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 3px gray;
 }
 .card-content__item img{
 width: 100%;

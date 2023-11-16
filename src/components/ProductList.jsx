@@ -5,18 +5,15 @@ import CardItem from "./CardItem";
 function ProductList() {
     const [productList, setProductList] = useState([]);
 
-   
-  useEffect(()=>{
-axios.get('https://go-intern-be.onrender.com/api/v1/products')
-.then((data)=>{
-    console.log(data.data)
 
-    setProductList(data.data);
-    console.log(productList)
+    useEffect(() => {
+        axios.get('https://go-intern-be.onrender.com/api/v1/products')
+            .then((data) => {
+                setProductList(data.data);
 
-})
-  }
-  ,[])
+            })
+    }
+        , [])
     return (
         <div className='card'>
             <span className='circle'></span>
@@ -25,18 +22,12 @@ axios.get('https://go-intern-be.onrender.com/api/v1/products')
                 <h2>Our Products</h2>
             </div>
             <div className='card-content'>
+                {
+                    productList.map((item, i) => (
 
-          {
-            
-               productList.map((item,i)=>(
-               
-                <CardItem key={i} item={item}/>
-               
-            ))}
-            
+                        <CardItem key={i} item={item} />
+                    ))}
             </div>
-           
-            
         </div>
     )
 }
