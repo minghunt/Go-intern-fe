@@ -6,22 +6,19 @@ import { incrementQuantity, decrementQuantity, removeItem} from '../redux/cartSl
 function CartItem(props) {
     const cart = useSelector((state) => state.cart)
 const [deleteClass,setDeLeteClass]=useState('')
-    let active=true
-    if (cart.filter(item => item.id === props.item.id).length)
-       active=false
 
-    const [isActive, setIsActive] = useState(active);
+
     const dispatch = useDispatch();
     const handleDelete=(id)=>{
         setDeLeteClass('card-cart-item')
         setTimeout(() => {
         dispatch(removeItem(id))
             
-        }, 100);
+        }, 400);
     }
     
     return (
-        <div className={`card-content__item-cart`}
+        <div className={`card-content__item-cart ${deleteClass}`}
                     style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <div className="element" style={{ marginLeft: '-15px', position: 'relative' }}>
                         <span style={{

@@ -28,7 +28,7 @@ left: -300px;
   justify-content: center;
   flex-wrap: wrap;
   overflow: scroll;
-  margin-top: 40px;
+  padding-top: 40px;
   padding-bottom: 30px;
 }
 
@@ -72,16 +72,14 @@ margin-top: 50px;
 font-weight: bolder;
 }
 .card-header h2{
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 .card-content{
   position: relative;
   z-index: 6;
-
+overflow-x: hidden;
   overflow-y:scroll;
-  height: 455px;
-  padding-bottom: 25px;
-  margin-bottom: 80px;
+  height: 464px;
 }
 .card-content__item:first-child{
   padding-top: 5px;
@@ -94,6 +92,7 @@ font-weight: bolder;
 }
 .card-content__item-img{
   border-radius: 28px;
+  margin: 2px;
   box-shadow: 0 0 3px gray;
 }
 .card-content__item img{
@@ -118,10 +117,7 @@ margin-left: -15px;
   margin: 0;
 }
 
-.btn-addtocart{
-  background-color: #f6c70f;
-  transition: all 0.3s ease-in;
-}
+
 .btn-addtocart:hover{
   background-color: #f6c70f;
   cursor: pointer;
@@ -129,22 +125,6 @@ margin-left: -15px;
   box-shadow: -1px 1px 1px #d0c8a7;
 }
 
-.available{
-  padding: 10px 18px;
-  border: none ;
-  border-radius: 28px;
-  box-shadow: 0 0 1px gray;
-}
 
-.ticked{
-  background: url(../src/public/img/check.png) center center no-repeat;
-  background-size: 60%;
-  border: none ;
-  border-radius: 50%;
-  width: 40px;
-  background-color: #f3d148;
-  height: 40px;
-  box-shadow: 0 0 1px gray;
-}
 
 
