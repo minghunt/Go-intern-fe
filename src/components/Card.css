@@ -1,0 +1,147 @@
+.card {
+    height: 530px;
+    width: 270px;
+    min-width: 270px;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    border-radius: 28px;
+    margin: 40px 20px 0;
+    padding: 12px 28px;
+    box-shadow: 0 0px 5px gray;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    top: -85px;
+    left: -125px;
+    z-index: 3;
+    background-color: #f6c70f;
+}
+
+.logo {
+    background: url(../public/img/nike.png) no-repeat;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: 50%;
+    content: '';
+    left: 20px;
+    z-index: 5;
+}
+
+.card-header {
+    position: relative;
+    z-index: 8;
+    margin-top: 50px;
+    font-weight: bolder;
+}
+
+.card-header h2 {
+    margin-bottom: 0px;
+}
+
+.card-content {
+    position: relative;
+    z-index: 6;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 464px;
+}
+
+.card-content__item:first-child {
+    padding-top: 5px;
+}
+
+.card-content__item:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.card-content__item-cart:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.card-content__item-img {
+    border-radius: 28px;
+    margin: 2px;
+    box-shadow: 0 0 3px gray;
+}
+
+.card-content__item img {
+    width: 100%;
+    transform: rotate(-28deg);
+    margin-left: -15px;
+}
+
+.card-content__item p {
+    color: gray;
+}
+
+.card-content__item_bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+.card-content__item_bottom h3 {
+    margin: 0;
+}
+
+
+
+
+
+
+/* Add to cart Animation */
+
+@keyframes slideInAddtocart {
+    from {
+        opacity: 0;
+        left: 20%;
+    }
+
+    to {
+        opacity: 1;
+        left: 0;
+        /* Hiển thị sang trái */
+    }
+}
+
+.btn-addtocart:hover {
+    background-color: #f6c70f;
+    cursor: pointer;
+    background-color: #f3d148;
+    box-shadow: -1px 1px 1px #d0c8a7;
+}
+
+.btn-addtocart {
+    position: relative;
+    box-shadow: 0 0 1px gray;
+    background-color: #f6c70f;
+    border: none;
+}
+
+.available {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 28px;
+    animation: slideInAddtocart 0.6s ease-in-out forwards;
+
+}
+
+.ticked {
+    transform-origin: center;
+    background: url(../public/img/check.png) center center no-repeat;
+    background-size: 60%;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: #f6c70f;
+    animation: fadeIn 0.35s ease-in-out forwards;
+}

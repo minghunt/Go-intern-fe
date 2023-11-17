@@ -1,29 +1,32 @@
+@keyframes moveUpDown {
+  0% {
+    top: 95%;
+    transform: translateY(-50%);
+    left: -300px;
+  }
 
+  100% {
+    top: 45%;
+    left: -300px;
+    transform: translateY(0);
+  }
+}
 .oval {
   width: 3800px;
   height: 800px;
   position: fixed;
   z-index: 0;
-  background:linear-gradient(to left, #e8c124,rgb(224, 185, 46));
+  background: linear-gradient(to left, #e8c124, rgb(224, 185, 46));
   border-radius: 50%;
   animation: moveUpDown 3s ease-in-out infinite alternate;
   box-shadow: 1px 1px 5px rgb(199, 196, 196);
 }
-@keyframes moveUpDown {
-  0% {
-    top: 95%;
-    transform: translateY(-50%);
-left: -300px;
-  }
-  100% {
-    top:45%;
-left: -300px;
-    transform: translateY(0);
-  }
+
+::-webkit-scrollbar {
+  display: none;
 }
 
-
-.content{
+.content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -31,100 +34,5 @@ left: -300px;
   padding-top: 40px;
   padding-bottom: 30px;
 }
-
-.card{
-  height: 530px;
-  width: 270px;
-  min-width: 270px;
-  background-color: white;
-  position: relative;
-  z-index: 3;
-  border-radius: 28px;
-  margin: 40px 20px 0;
-  padding: 12px 28px;
-  box-shadow: 0 0px 5px gray;
-  overflow: hidden;
-}
-.circle{
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border-radius: 150px;
-  top: -85px;
-  left: -125px;
-  z-index: 3;
-  background-color: #f6c70f;
-}
-.logo{
-  background: url(../src/public/img/nike.png) no-repeat;
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background-size: 50%;
-  content: '';
-  left: 20px;
-  z-index: 5;
-}
-.card-header{
-position: relative;
-z-index: 8;
-margin-top: 50px;
-font-weight: bolder;
-}
-.card-header h2{
-  margin-bottom: 0px;
-}
-.card-content{
-  position: relative;
-  z-index: 6;
-overflow-x: hidden;
-  overflow-y:scroll;
-  height: 464px;
-}
-.card-content__item:first-child{
-  padding-top: 5px;
-}
-.card-content__item:not(:last-child){
-  margin-bottom: 65px;
-}
-.card-content__item-cart:not(:last-child){
-  margin-bottom: 5px;
-}
-.card-content__item-img{
-  border-radius: 28px;
-  margin: 2px;
-  box-shadow: 0 0 3px gray;
-}
-.card-content__item img{
-width: 100%;
-transform: rotate(-28deg);
-margin-left: -15px;
-}
-
-.card-content__item p{
-  color: gray;
-}
-::-webkit-scrollbar {
-  display: none;
-}
-.card-content__item_bottom{
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  align-items: center;
-}
-.card-content__item_bottom h3{
-  margin: 0;
-}
-
-
-.btn-addtocart:hover{
-  background-color: #f6c70f;
-  cursor: pointer;
-  background-color: #f3d148;
-  box-shadow: -1px 1px 1px #d0c8a7;
-}
-
-
 
 

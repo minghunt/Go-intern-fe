@@ -6,14 +6,13 @@ import { useSelector } from 'react-redux';
 import './Cart.css'
 function CardItem(props) {
     const cart = useSelector((state) => state.cart)
-
-    let active=true
-    if (cart.filter(item => item.id === props.item.id).length)
-       active=false
-
-    const [isActive, setIsActive] = useState(active);
     const dispatch = useDispatch();
 
+    let active = true
+    if (cart.filter(item => item.id === props.item.id).length)
+        active = false
+
+    const [isActive, setIsActive] = useState(active);
 
     const toggleActive = () => {
         if (isActive) {
@@ -22,18 +21,17 @@ function CardItem(props) {
             setIsActive(!isActive);
         }
     };
-    useEffect(()=>{
-        let active=true
+    useEffect(() => {
+        let active = true
         if (cart.filter(item => item.id === props.item.id).length)
-           active=false
-           setIsActive(active)
+            active = false
+        setIsActive(active)
 
-    },[cart])
+    }, [cart,props.item.id])
     return (
         <div className='card-content__item '>
             <div className='card-content__item-img' style={{ backgroundColor: props.item?.color }}>
                 <img src={props.item?.image} alt="" />
-
             </div>
             <h3>{props.item?.name}</h3>
             <p>{props.item?.description}</p>
@@ -43,7 +41,6 @@ function CardItem(props) {
                     toggleActive()
                 } className={`btn-addtocart ${isActive ? 'available' : 'ticked'}`}>{isActive ? <h3>ADD TO CART</h3> : ''}</button>
             </div>
-
         </div>
     )
 }

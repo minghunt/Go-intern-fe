@@ -1,21 +1,18 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 function App() {
-  
+
   return (
     <div>
-<div className="oval">
+      <div className="oval">
+      </div>
+      <div className='content'>
+        <ProductList  />
+        <Cart />
+      </div>
     </div>
-    <div className='content'> 
-    <ProductList className='ProductList'/>
-    <Cart />
-    </div>
-    
-    </div>
-    
-    
   );
 }
 
